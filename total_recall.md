@@ -243,7 +243,8 @@ p.close()
 ```
 
 After running the code, I received this output:
-<img width="577" height="263" alt="Pasted image 20260929120228" src="https://github.com/user-attachments/assets/01d5ad49-742a-45a0-bc8f-82cc8cbf30a2" />
+<img width="577" height="263" alt="Pasted image 20260929114432<img width="568" height="267" alt="Pasted image 20260929114432" src="https://github.com/user-attachments/assets/81470684-5d72-4c9f-9d8b-8962eed2cf03" />
+" src="https://github.com/user-attachments/assets/01d5ad49-742a-45a0-bc8f-82cc8cbf30a2" />
 
 When I fixed the name of the file, I was able to obtain the flag.
 <img width="577" height="263" alt="Pasted image 20260929120228" src="https://github.com/user-attachments/assets/9e3b8f54-8afe-4a0e-bc0e-8846e3cb1602" />
