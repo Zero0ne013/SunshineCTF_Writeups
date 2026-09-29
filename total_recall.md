@@ -1,3 +1,6 @@
+<img width="577" height="263" alt="Pasted image 20260929120228" src="https://github.com/user-attachments/assets/9e3b8f54-8afe-4a0e-bc0e-8846e3cb1602" />
+<img width="577" height="263" alt="Pasted image 20260929120228" src="https://github.com/user-attachments/assets/01d5ad49-742a-45a0-bc8f-82cc8cbf30a2" />
+<img width="2071" height="1157" alt="Screenshot_20260929-115758" src="https://github.com/user-attachments/assets/abdeeb1f-5676-4831-8294-0c705058a070" />
 # Total recall
 
 ## Assignment
