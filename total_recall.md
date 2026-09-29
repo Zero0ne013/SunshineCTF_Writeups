@@ -1,6 +1,6 @@
-<img width="577" height="263" alt="Pasted image 20260929120228" src="https://github.com/user-attachments/assets/9e3b8f54-8afe-4a0e-bc0e-8846e3cb1602" />
-<img width="577" height="263" alt="Pasted image 20260929120228" src="https://github.com/user-attachments/assets/01d5ad49-742a-45a0-bc8f-82cc8cbf30a2" />
-<img width="2071" height="1157" alt="Screenshot_20260929-115758" src="https://github.com/user-attachments/assets/abdeeb1f-5676-4831-8294-0c705058a070" />
+
+
+
 # Total recall
 
 ## Assignment
@@ -73,7 +73,7 @@ First, I tried to exploit the vulnerability using a simple stack overflow. I use
 
 However, after running the exploit, I found that it did not work.
 
-![[Pasted image 20260928230752.png]]
+<img width="504" height="73" alt="total_recall" src="https://github.com/user-attachments/assets/1565cfb0-f9f7-49ed-b4a3-e6800e9048e8" />
 
 Code:
 ``` python
@@ -107,7 +107,8 @@ I try to figure out why, and SROP comes to my mind. In this attack, the attacker
 
 Because I control the saved return address on the stack, I overwrite it with `0x40104f`. This causes the vulnerable `read` function to be executed again when the function returns. I also use the higher addresses to add `0x401069` and the FRAME. The principle can be seen in the picture.
 
-![[Screenshot_20260929-115758.png]]
+<img width="2071" height="1157" alt="Screenshot_20260929-115758" src="https://github.com/user-attachments/assets/abdeeb1f-5676-4831-8294-0c705058a070" />
+
 
 Based on the syscall table, we know that `execve` is number 59 ([Linux syscall table](https://filippo.io/linux-syscall-table/)). To enter the payload properly, we first need to add padding to overflow the buffer, which is `b'A' * 0x80`. Then we add the address for the second read. This is because we need to put the number 15 into `RAX`, and we can do this by sending 15 bytes. Then we add the address of the `syscall` instruction, in our case `0x401069`. After that, we add the frame. To create it, we use the `SigreturnFrame` class from the pwntools library.
 
@@ -242,7 +243,7 @@ p.close()
 ```
 
 After running the code, I received this output:
-![[Pasted image 20260929114432.png]]
+<img width="577" height="263" alt="Pasted image 20260929120228" src="https://github.com/user-attachments/assets/01d5ad49-742a-45a0-bc8f-82cc8cbf30a2" />
 
 When I fixed the name of the file, I was able to obtain the flag.
-![[Pasted image 20260929120228.png]]
+<img width="577" height="263" alt="Pasted image 20260929120228" src="https://github.com/user-attachments/assets/9e3b8f54-8afe-4a0e-bc0e-8846e3cb1602" />
