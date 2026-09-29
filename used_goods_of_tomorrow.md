@@ -11,6 +11,7 @@ Upon entering the site, we are presented with an e-shop displaying various items
 <img width="1418" height="2205" alt="temp3428886750605694515" src="https://github.com/user-attachments/assets/f1098f96-237b-42b0-b784-dcb75c40169f" />
 
 The website also mentions that registering a new account grants us 500 cr. My initial thought was to check for a simple parameter tampering vulnerability, perhaps we could intercept the registration request and change our starting balance from 500 to 5,000,000, or modify the item price to 0 during checkout. To test this theory, I proceeded to register an account.
+
 <img width="660" height="826" alt="temp7981792884919400060" src="https://github.com/user-attachments/assets/d48b1d7e-bd22-48b9-b077-711c5be04933" />
 
 Intercepting the registration traffic in Burp Suite revealed the payload structure and showed that the application communicates with a GraphQL endpoint.
