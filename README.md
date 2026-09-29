@@ -1,1 +1,1 @@
-This is repository of write ups from SunshineCTF 2026
+This is repository of write-ups from SunshineCTF 2026
